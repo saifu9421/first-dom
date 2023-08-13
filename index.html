@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tour of dom</title>
+    <style>
+        li{
+            color:rgb(105, 46, 182);
+        }
+        
+        #fruts{
+            color:black;
+        }
+       
+          .fruts-container li{
+            color:tomato;
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcom to my DoM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta neque recusandae ducimus, architecto id accusamus ratione alias! Sint doloribus nesciunt reiciendis quas eligendi mollitia velit nihil architecto cum. Totam, repellendus.</p>
+    </header>
+    <main id = "main-container">
+     <h1>My Awsome DoM de baba</h1>
+      <section>
+        <ul>
+            <li>
+                jalali set
+            </li>
+            <li>safayet</li>
+            <li>bonobas</li>
+            <li>Dom de re baba</li>
+         </ul>
+      </section>
+      <section class="fruts-container"> 
+        <h1 id = "fruts">Fruits  I like</h1>
+        <ul>
+         
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>lemon</li>
+         </ul>
+      </section>
+
+      <section id = "places-container">
+        <h1 id = "places-title">Places I like to visit</h1>
+        <ul id = "places-list">
+            <li class="important-places">Soondarban</li>
+            <li class="important-places">bandorban</li>
+            <li class="important-places">kataban</li>
+            <li class="other-class">salban</li>
+        </ul>
+      </section>
+    
+
+      <section class="detalis">
+    <div id = "my-details">
+        <!-- my Detalis -->
+
+       <h1>Name:saif</h1>
+
+       <p>Age:18</p>
+    </div>
+
+      </section>
+
+  </main>
+  <script src="append.js"></script>
+  <script src="dom.js"> 
+  </script>
+
+  <script>
+   const liCalation = document.getElementsByTagName('li');
+   // console.log(liCalation);
+   for(const li of liCalation){
+   //  console.log(li.innerText); 
+   }
+   const allHeading =  document.getElementsByTagName('h1');
+   for (const h1 of allHeading){
+  //  console.log(h1);
+   }
+   const places = document.getElementsByClassName('important-places');
+   for(const place of places){
+    console.log(place.innerText);
+   }
+
+   const fruits = document.getElementById('fruts');
+    fruits.innerText = "changed java script";
+    console.log(fruits.innerText);
+    const others =  document.getElementsByClassName('other-class');
+    for(const other  of others){
+        console.log(other);
+    } 
+    // query Selector
+    const someli = document.querySelectorAll('.fruts-container li');
+    console.log(someli);
+    for(const li of someli){
+        console.log(li.innerText);
+    }
+    const div =  document.getElementById('my-details');
+    const text = div.innerHTML;
+    
+        </script>
+
+</body>
+</html>
